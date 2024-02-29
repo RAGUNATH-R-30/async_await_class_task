@@ -6,7 +6,7 @@ async function covid_data(){
     var recovered =api_data.TN.total.recovered
     var tested = api_data.TN.total.tested
     var vaccinated1 = api_data.TN.total.vaccinated1
-    var vaccinated2 = api_data.TN.total.vaccinated1
+    var vaccinated2 = api_data.TN.total.vaccinated2
     var div = document.createElement("div")
     div.innerHTML= `<div class="card" style="width: 18rem;">
     <div class="card-header">
