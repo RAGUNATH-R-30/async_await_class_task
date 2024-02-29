@@ -1,12 +1,12 @@
 async function covid_data(){
     var api = await fetch("https://data.covid19india.org/v4/min/data.min.json")
     var api_data = await api.json();
-    var confirmed = api_data.TN.total.confirmed
-    var deceased = api_data.TN.total.deceased
-    var recovered =api_data.TN.total.recovered
-    var tested = api_data.TN.total.tested
-    var vaccinated1 = api_data.TN.total.vaccinated1
-    var vaccinated2 = api_data.TN.total.vaccinated2
+    var confirmed = api_data.TN.districts.Chennai.total.confirmed.toLocaleString();
+    var deceased = api_data.TN.districts.Chennai.total.deceased.toLocaleString();
+    var recovered =api_data.TN.districts.Chennai.total.recovered.toLocaleString();
+    var tested = api_data.TN.districts.Chennai.total.tested.toLocaleString();
+    var vaccinated1 = api_data.TN.districts.Chennai.total.vaccinated1.toLocaleString();
+    var vaccinated2 = api_data.TN.districts.Chennai.total.vaccinated2.toLocaleString();
     var div = document.createElement("div")
     div.innerHTML= `<div class="card bg-light mb-3" style="max-width: 18rem;">
     <div class="card-header"><h5>Chennai-Covid-Data</h5></div>
