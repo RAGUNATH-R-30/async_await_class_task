@@ -8,20 +8,19 @@ async function covid_data(){
     var vaccinated1 = api_data.TN.total.vaccinated1
     var vaccinated2 = api_data.TN.total.vaccinated2
     var div = document.createElement("div")
-    div.innerHTML= `<div class="card" style="width: 18rem;">
-    <div class="card-header">
-      Chennai-covid-data
+    div.innerHTML= `<div class="card bg-light mb-3" style="max-width: 18rem;">
+    <div class="card-header"><h5>Chennai-Covid-Data</h5></div>
+    <div class="card-body">
+      <p class="card-text">Confirmed: ${confirmed}.</p>
+      <p class="card-text">Deceased: ${deceased}.</p>
+      <p class="card-text">Recovered: ${recovered}.</p>
+      <p class="card-text">Tested: ${tested}.</p>
+      <p class="card-text">Vaccinated1: ${vaccinated1}.</p>
+      <p class="card-text">Vaccinated2: ${vaccinated2}.</p>
     </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Confirmed: ${confirmed}</li>
-      <li class="list-group-item">Deceased: ${deceased}</li>
-      <li class="list-group-item">Recovered: ${recovered}</li>
-      <li class="list-group-item">Tested: ${tested}</li>
-      <li class="list-group-item">Vaccinated1: ${vaccinated1}</li>
-      <li class="list-group-item">Vaccinated2: ${vaccinated2}</li>
-    </ul>
   </div>`
   document.body.append(div)
 }
 
 covid_data();
+
